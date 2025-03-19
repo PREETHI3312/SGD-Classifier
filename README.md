@@ -66,6 +66,13 @@ cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
 
+plt.figure(figsize=(6,4))
+sns.heatmap(cm, annot=True, cmap="Blues", fmt='d', xticklabels=iris.target_names, yticklabels=iris.target_names)
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.title("Confusion Matrix")
+plt.show()
+
 ```
 
 ## Output:
@@ -77,6 +84,12 @@ print(cm)
 ![image](https://github.com/user-attachments/assets/e6529585-3244-4255-a2cf-8dec45a02cc8)
 
 ![image](https://github.com/user-attachments/assets/3c0567b7-dc50-48e2-b42b-36215839d63f)
+
+![image](https://github.com/user-attachments/assets/27b76a7c-2f6a-4bbb-9f04-091d4f6bc886)
+
+
+
+
 
 ## Result:
 Thus, the program to implement the prediction of the Iris species using SGD Classifier is written and verified using Python programming.
